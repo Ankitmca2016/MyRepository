@@ -9,6 +9,9 @@ import com.example.entity.product;
 import com.example.repository.ProductRepository;
 import com.example.request.CreateProductRequest;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @Service
 public class ProductService {
 
@@ -17,7 +20,7 @@ public class ProductService {
 	
 	public List<product> getAllProducts () {
 		//return productRepository.findAll();
-		System.out.print(""  + productRepository.getMaxsold().size());
+		log.debug("Getting Max Sold"  + productRepository.getMaxsold().size());
 		return productRepository.getMaxsold();
 	}
 	
