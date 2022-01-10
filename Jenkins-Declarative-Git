@@ -2,7 +2,7 @@ pipeline {
     agent any
     
     environment{
-      PATH= "E:\My Java World\apache-maven-3.5.4\bin:$PATH"
+      PATH= "E:/My Java World/apache-maven-3.5.4/bin:$PATH"
     }
 
     stages {
