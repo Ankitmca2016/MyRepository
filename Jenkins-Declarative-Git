@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+    
+    environment{
+      PATH= "E:\My Java World\apache-maven-3.5.4\bin:$PATH"
+    }
+
+    stages {
+        stage('Git Cheak') {
+            steps {
+                git 'https://github.com/Ankitmca2016/MyRepository.git'
+            }
+        }
+        stage('Maven Build') {
+          steps{
+            sh "mvn clean package"
+            }
+        }
+    }
+}
